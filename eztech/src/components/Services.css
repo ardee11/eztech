@@ -1,0 +1,41 @@
+.service-item {
+  transition: transform 0.3s ease;
+  /* Smooth transition for both image and text */
+}
+
+.service-item:hover {
+  transform: scale(1.2);
+  /* Scale up both image and text on hover */
+}
+
+.moving-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(13, 255, 0, 0.1), rgba(0, 102, 255, 0.05));
+  background-size: 400% 400%;
+  /* Make the gradient larger for smoother animation */
+  animation: gradientAnimation 20s ease infinite;
+  /* Adjust duration as needed */
+  z-index: 0;
+  /* Place it behind other content */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+    /* Start at the top left */
+  }
+
+  50% {
+    background-position: 100% 100%;
+    /* Move to the bottom right */
+  }
+
+  100% {
+    background-position: 0% 0%;
+    /* Loop back to the start */
+  }
+}

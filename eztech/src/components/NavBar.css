@@ -1,0 +1,68 @@
+@media (max-width: 991px) {
+    .nav-link {
+        margin-top: 30px;
+        /* For top margin on small screens */
+    }
+
+    .nav-link:last-child {
+        margin-bottom: 16px;
+        /* Specific for the last link */
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.navbar-border {
+    height: 5px;
+    width: 100%;
+    /* Full width */
+    position: fixed;
+    /* Fixed position to keep it in view */
+    bottom: 1;
+    /* Adjust this based on your navbar height */
+    background: linear-gradient(270deg, #00AC47, #A4CF25, #00AC47);
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite;
+    z-index: 1020;
+    /* Make sure it's above other elements */
+}
+
+/* Remove specific nav-link styles, since Bootstrap handles them */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    /* Change this to your desired hover color */
+}
+
+@media (min-width: 991px) {
+    /* Underline effect */
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background-color: #007bff;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        transform: scaleX(1);
+        /* Scale to full width on hover */
+    }
+}

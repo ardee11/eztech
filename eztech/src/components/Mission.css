@@ -1,0 +1,15 @@
+.mission-section-bg {
+  background-color: #E4E4E4;
+  height: 250px;
+}
+
+.mission-div {
+  max-width: 550px;
+  margin-right: 72px;
+}
+
+.mission-shape {
+  background-color: #0066DA;
+  height: 100px;
+  width: 10px;
+}

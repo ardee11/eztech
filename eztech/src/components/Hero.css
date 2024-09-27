@@ -1,0 +1,4 @@
+.responsive-h1 {
+  font-size: clamp(48px, 5vw, 72px);
+  /* Minimum 32px, maximum 64px, responsive scaling */
+}

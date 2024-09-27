@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700,900');
+
+body {
+  font-family: 'Montserrat', Arial;
+  /* Set the global font */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
+}
+
+.text-accent-0 {
+  color: #00D457;
+}
+
+.justify {
+  text-align: justify;
+}
