@@ -7,6 +7,7 @@ body {
   /* Remove default margin */
   padding: 0;
   /* Remove default padding */
+  background-color: #FFFFFF;
 }
 
 .text-accent-0 {
@@ -15,4 +16,20 @@ body {
 
 .justify {
   text-align: justify;
+}
+
+.inline-container {
+  display: flex;
+  /* Use flexbox */
+  justify-content: space-between;
+  /* Space them out evenly */
+  align-items: center;
+  /* Center them vertically */
+}
+
+.inline-container>* {
+  flex: 1;
+  /* Optional: allows components to take equal space */
+  margin: 10px;
+  /* Optional: adds spacing between components */
 }

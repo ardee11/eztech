@@ -12,7 +12,7 @@ const Services = () => {
           className="img-fluid w-100"
           alt="What we do"
         />
-        <div className="moving-gradient"></div>
+        <div className="moving-gradient" />
         <Container>
           <div className="position-absolute top-50 start-50 translate-middle">
             <div className="text-center">

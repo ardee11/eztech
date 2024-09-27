@@ -1,0 +1,18 @@
+.partners-bg {
+  height: 600px;
+  position: relative;
+  display: flex;
+  /* Added for centering content */
+  align-items: center;
+  /* Vertically center the content */
+  justify-content: center;
+  /* Horizontally center the content */
+}
+
+.carousel-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 60%;
+  height: auto;
+  padding-bottom: 80px;
+}

@@ -1,4 +1,31 @@
+
 .responsive-h1 {
   font-size: clamp(48px, 5vw, 72px);
   /* Minimum 32px, maximum 64px, responsive scaling */
+}
+
+.hero-section {
+  height: 100vh;
+  /* Full viewport height */
+  position: relative;
+  overflow: hidden;
+  /* Prevent overflow */
+}
+
+.hero-section img {
+  position: absolute;
+  /* Make image cover the section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Maintain aspect ratio and cover */
+}
+
+.text-white {
+  position: relative;
+  /* Ensure text is above the image */
+  z-index: 1;
+  /* Bring text above the background */
 }

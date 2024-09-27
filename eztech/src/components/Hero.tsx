@@ -3,10 +3,10 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <header className="position-relative">
+    <header className="hero-section position-relative">
       <img 
-        src="src/assets/hero-main1.png"
-        className="img-fluid"
+        src="src/assets/hero-main2.png"
+        className="img-fluid w-100" // Make it full-width
         alt="Hero"
       />
       <Container>
@@ -16,7 +16,7 @@ const Hero = () => {
             <p className="fs-5">Providing the best fit for your company</p>
           </div>
         </div>
-    </Container>
+      </Container>
     </header>
   );
 }

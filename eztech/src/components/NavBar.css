@@ -1,13 +1,45 @@
-@media (max-width: 991px) {
-    .nav-link {
-        margin-top: 30px;
-        /* For top margin on small screens */
-    }
+.transition-navbar {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 1020;
+}
 
-    .nav-link:last-child {
-        margin-bottom: 16px;
-        /* Specific for the last link */
-    }
+.navbar-hidden {
+    background-color: transparent;
+    color: white;
+}
+
+.navbar-hidden .nav-link {
+    color: white;
+}
+
+.navbar-visible {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.navbar-visible .nav-link {
+    color: black;
+}
+
+.nav-link:hover {
+    color: #007bff;
+    /* Change this to your desired hover color */
+}
+
+/* Position the border directly below the navbar */
+.navbar-border {
+    height: 5px;
+    width: 100%;
+    position: fixed;
+    top: 90px;
+    /* Adjust to 0 to place at the bottom of the navbar */
+    background: linear-gradient(270deg, #00AC47, #A4CF25, #00AC47);
+    background-size: 400% 400%;
+    animation: gradientAnimation 3s ease infinite;
+    z-index: 1020;
+    /* Ensure it stays on top */
 }
 
 @keyframes gradientAnimation {
@@ -20,49 +52,13 @@
     }
 }
 
-.navbar-border {
-    height: 5px;
-    width: 100%;
-    /* Full width */
-    position: fixed;
-    /* Fixed position to keep it in view */
-    bottom: 1;
-    /* Adjust this based on your navbar height */
-    background: linear-gradient(270deg, #00AC47, #A4CF25, #00AC47);
-    background-size: 400% 400%;
-    animation: gradientAnimation 3s ease infinite;
-    z-index: 1020;
-    /* Make sure it's above other elements */
-}
-
-/* Remove specific nav-link styles, since Bootstrap handles them */
-.nav-link {
-    position: relative;
-    transition: color 0.3s ease;
-    text-decoration: none;
-}
-
-.nav-link:hover {
-    color: #007bff;
-    /* Change this to your desired hover color */
-}
-
-@media (min-width: 991px) {
-    /* Underline effect */
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 2px;
-        width: 100%;
-        background-color: #007bff;
-        transform: scaleX(0);
-        transition: transform 0.3s ease;
+/* Media query for responsiveness */
+@media (max-width: 991px) {
+    .nav-link {
+        margin-top: 30px;
     }
 
-    .nav-link:hover::after {
-        transform: scaleX(1);
-        /* Scale to full width on hover */
+    .nav-link:last-child {
+        margin-bottom: 16px;
     }
 }
