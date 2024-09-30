@@ -12,7 +12,7 @@ function NavBar({ visible }: NavBarProps) {
     <Navbar 
       sticky="top" 
       expand="lg" 
-      className={`transition-navbar ${visible ? 'navbar-visible' : 'navbar-hidden'}`}
+      className={`transition-navbar ${visible ? 'navbar-visible' : 'navbar-hidden'} bg-green`}
     >
       <Container>
         <Navbar.Brand href="#home">
@@ -26,7 +26,7 @@ function NavBar({ visible }: NavBarProps) {
           )}
           {visible && (
             <img
-              src="src/assets/ezlogo.png"
+              src="src/assets/ezlogo3.png"
               alt="EZTech Logo"
               height="69"
               className="d-inline-block align-top"

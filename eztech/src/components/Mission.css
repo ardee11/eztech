@@ -1,15 +1,47 @@
 .mission-section-bg {
-  background-color: #E4E4E4;
-  height: 250px;
+  background-color: rgba(0, 43, 54, 0.2);
+  padding: 180px 0 80px 0;
 }
 
-.mission-div {
-  max-width: 550px;
-  margin-right: 72px;
+.image-placeholder2 {
+  background-color: #ccc;
+  height: 300px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .mission-shape {
   background-color: #0066DA;
-  height: 100px;
-  width: 10px;
+  height: 200px;
+  width: auto
 }
+
+/* SCREEN SIZE 992 */
+
+@media (max-width: 992px) {
+  .mobile-margin {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .mission-shape {
+    display: none;
+  }
+}
+
+/*SCREEN SIZE 576 */
+
+@media (max-width: 576px) {
+  .mission-section-bg {
+    padding: 40px 0;
+    /* Adjust padding for mobile */
+  }
+
+  .image-placeholder2 {
+    height: 300px;
+    /* Reduce height on mobile */
+  }
+}
+

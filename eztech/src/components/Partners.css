@@ -1,5 +1,5 @@
 .partners-bg {
-  height: 600px;
+  padding: 50px 0;
   position: relative;
   display: flex;
   /* Added for centering content */
@@ -12,7 +12,21 @@
 .carousel-image {
   display: block;
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 80%;
   height: auto;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+}
+
+.carousel-image2 {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+/*SCREEN SIZE 767 */
+
+@media (max-width: 767px) {
+
 }

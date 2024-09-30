@@ -5,9 +5,9 @@
     z-index: 1020;
 }
 
+/* transparent navbar */
 .navbar-hidden {
     background-color: transparent;
-    color: white;
 }
 
 .navbar-hidden .nav-link {
@@ -15,12 +15,12 @@
 }
 
 .navbar-visible {
-    background-color: rgb(255, 255, 255);
-    color: black;
+    background-color: #013846 !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .navbar-visible .nav-link {
-    color: black;
+    color: white;
 }
 
 .nav-link:hover {
@@ -28,19 +28,18 @@
     /* Change this to your desired hover color */
 }
 
-/* Position the border directly below the navbar */
+
 .navbar-border {
     height: 5px;
     width: 100%;
     position: fixed;
     top: 90px;
-    /* Adjust to 0 to place at the bottom of the navbar */
-    background: linear-gradient(270deg, #00AC47, #A4CF25, #00AC47);
+    background: linear-gradient(270deg, #008538, #91b429, #008538);
     background-size: 400% 400%;
     animation: gradientAnimation 3s ease infinite;
     z-index: 1020;
-    /* Ensure it stays on top */
 }
+
 
 @keyframes gradientAnimation {
     0% {
