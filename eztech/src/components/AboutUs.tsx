@@ -3,7 +3,7 @@ import "./AboutUs.css";
 
 const AboutUs = () => {
   return (
-    <div className="bg-light d-flex about-section-bg">
+    <div id="about" className="bg-light d-flex about-section-bg">
       <Container>
         <Row className="align-items-center justify-content-between">
           <Col xs={12} md={12} lg={5}>

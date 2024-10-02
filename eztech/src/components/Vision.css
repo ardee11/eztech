@@ -33,6 +33,7 @@
 /*SCREEN SIZE 576 */
 
 @media (max-width: 576px) {
+
   .mission-section-bg {
     padding: 40px 0;
     /* Adjust padding for mobile */

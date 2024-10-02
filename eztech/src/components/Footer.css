@@ -1,0 +1,26 @@
+.footer-bg {
+  background-color: rgba(0, 43, 54, 1);
+  padding: 60px 0 120px 0;
+}
+
+.footer-images {
+  zoom: 1.3;
+  margin-right: 8px;
+}
+
+.text-offwhite {
+  color: rgb(221, 221, 221);
+}
+
+.footer-text {
+  text-align: center;
+  margin-top: 48px;
+}
+/*SCREEN SIZE 991 */
+
+@media (max-width: 991px) {
+  .footer-text {
+    margin-top: 18px;
+    text-align: left;
+  }
+}

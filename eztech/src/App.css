@@ -33,3 +33,28 @@ body {
   margin: 10px;
   /* Optional: adds spacing between components */
 }
+
+/*Fill color on button*/
+.primary-button {
+  border: solid 1px;
+  border-color: #00AC47;
+  background-color: #00AC47;
+}
+
+/*Only the button border has color*/
+.secondary-button {
+  border: solid 1px;
+  border-color: #00AC47;
+  background-color: transparent;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+  border: solid 1px;
+  border-color: #00cd56;
+  background-color: #00cd56;
+}
+
+.primary-button:active {
+  background-color: #02aa48;
+}

@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
@@ -13,26 +12,9 @@ import "./App.css";
 
 function App() {
 
-    const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <>
-      <NavBar visible={visible} />
+      <NavBar />
       <Hero />
       <AboutUs />
       <Value />

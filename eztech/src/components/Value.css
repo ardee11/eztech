@@ -1,13 +1,128 @@
 .value-section-bg {
-  padding: 140px 0;
+  height: 280px;
   background-color: rgba(0, 43, 54, 1);
+  background-image: url('./src/assets/value-bg.png');
+  background-size: cover;
+}
+
+.image-width {
+  position: absolute;
+  width: 100%;
+}
+
+.card-div {
+  justify-content: space-evenly;
+  margin-bottom: -15vh;
+}
+
+.title-text {
+  font-size: 36px;
+  justify-content: center;
+}
+
+.icon-container {
+  margin-top: 32px;
+  position: relative;
+  /* Keep images positioned correctly */
+  text-align: center;
+  /* Center images horizontally */
+  display: flex;
+  /* Use flex to stack items vertically */
+  flex-direction: column;
+  /* Stack children vertically */
+  align-items: center;
+  /* Center children horizontally */
+}
+
+.icon-text {
+  margin: 24px 0;
 }
 
 .value-card {
-  padding: 90px 140px;
-  background-color: #E4E4E4;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  background-color: white;
   border-radius: 10px;
   border: solid 1px;
   border-color: rgba(0, 43, 54, 0.6);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.value-icon {
+  width: 58px;
+  height: auto;
+}
+
+.value-icon-hover {
+  width: 74px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show GIF on hover */
+.value-card:hover .value-icon {
+  opacity: 0;
+}
+
+.value-card:hover .value-icon-hover,
+.value-card:hover .value-icon-hover2 {
+  opacity: 1;
+}
+
+/* Add media queries if needed */
+@media (max-width: 992px) {
+  .value-section-bg {
+    height: 220px;
+  }
+
+  .value-card {
+    margin-top: 30px;
+  }
+
+  .value-icon {
+    width: 42px;
+  }
+  .value-icon-hover {
+    width: 58px;
+  }
+}
+
+@media (max-width: 767px) {
+  .value-section-bg {
+    height: 400px;
+  }
+
+  .value-card {
+    margin-top: 50px;
+  }
+
+  .mobile {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .value-section-bg {
+    height: auto;
+  }
+
+  .title-text {
+    margin-bottom: 40px;
+  }
+
+  .value-card {
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
+
+  .card-div {
+    margin-bottom: 0;
+  }
 }

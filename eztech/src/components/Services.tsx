@@ -3,10 +3,10 @@ import "./Services.css";
 
 const Services = () => {
   return (
-    <div className="position-relative d-flex services-section-bg">
+    <div id="services" className="position-relative d-flex services-section-bg">
       <div className="moving-gradient" />
       <div className="position-absolute top-50 start-50 translate-middle">
-        <img src="./src/assets/globe-vector.svg" className="globe-shape" />
+        <img src="./src/assets/globe-vector.svg" className="globe-shape img-fluid" />
       </div>
       <Container>
         <div className="position-absolute top-50 start-50 translate-middle">
@@ -24,7 +24,7 @@ const Services = () => {
               { img: "src/assets/services-icon6.svg", title: "Enterprise Storage Backup Solutions" },
               { img: "src/assets/services-icon7.svg", title: "Systems Integration" },
             ].map((service, index) => (
-              <Col xs={6} sm={6} md={4} lg={3} className="text-center" key={index}>
+              <Col xs={12} sm={8} md={4} lg={3} className="text-center" key={index}>
                 <div className="service-item">
                   <img className="img-fluid" src={service.img} alt="" />
                   <div className="text-title text-white mt-3">{service.title}</div>

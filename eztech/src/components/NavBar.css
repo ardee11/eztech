@@ -15,19 +15,20 @@
 }
 
 .navbar-visible {
-    background-color: #013846 !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    background-color: #003d4a !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-visible .nav-link {
-    color: white;
+    color: rgb(212, 212, 212);
 }
 
-.nav-link:hover {
-    color: #007bff;
-    /* Change this to your desired hover color */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    color: #00cd56;
+    /* Change this to your desired hover/focus color */
 }
-
 
 .navbar-border {
     height: 5px;
@@ -40,6 +41,13 @@
     z-index: 1020;
 }
 
+.navbar-hidden .nav-link.active {
+    color: rgb(212, 212, 212);
+}
+
+.navbar-visible .nav-link.active {
+    color: rgb(212, 212, 212);
+}
 
 @keyframes gradientAnimation {
     0% {
@@ -59,5 +67,9 @@
 
     .nav-link:last-child {
         margin-bottom: 16px;
+    }
+
+    .contactus-button {
+        display: none;
     }
 }
