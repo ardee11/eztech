@@ -51,10 +51,12 @@ body {
 .primary-button:hover,
 .secondary-button:hover {
   border: solid 1px;
-  border-color: #00cd56;
-  background-color: #00cd56;
+  border-color: #00c050;
+  background-color: #00c050;
 }
 
-.primary-button:active {
+/*not working*/
+.primary-button:active,
+.secondary-button:active {
   background-color: #02aa48;
 }

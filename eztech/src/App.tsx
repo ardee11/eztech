@@ -9,11 +9,13 @@ import Partners from "./components/Partners";
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import "./App.css";
+import { ToastProvider } from "./components/ToastContext";
 
 function App() {
 
   return (
     <>
+    <ToastProvider>
       <NavBar />
       <Hero />
       <AboutUs />
@@ -24,6 +26,7 @@ function App() {
       <Partners />
       <ContactUs />
       <Footer />
+    </ToastProvider>
     </>
   );
 }

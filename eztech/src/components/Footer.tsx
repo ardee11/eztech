@@ -1,4 +1,4 @@
-import { Col, Container, Row } from 'react-bootstrap';
+import { Alert, Col, Container, Row } from 'react-bootstrap';
 import "./Footer.css";
 
 const Footer = () => {
@@ -32,15 +32,20 @@ const Footer = () => {
               <Col lg={4} className="footer-text">
                 <img src='./src/assets/telephone-fill.svg' className='footer-images' />
                 <span className="ms-2">
-                  Tel: <a href="tel:+63275091428">(02) 8691-9608</a>
+                  Tel: (02) 8691-9608
                 </span>
               </Col>
               <Col lg={4} className="footer-text">
                 <img src='./src/assets/envelope-fill.svg' className='footer-images' />
                 <span className="ms-2">
-                  Email: <a href="mailto:sales@eztechit.com">sales@eztechit.com</a>
+                  Email: sales@eztechit.com
                 </span>
               </Col>
+              <Row>
+                <Col lg={12} className="footer-attribute">
+                <p>Images from <Alert.Link href="https://www.freepik.com/" target='_blank'>FreePik</Alert.Link> and <Alert.Link href="https://www.flaticon.com/" target='_blank'>Flaticon</Alert.Link></p>
+                </Col>
+              </Row>
             </Row>
           </Container>
         </div>
