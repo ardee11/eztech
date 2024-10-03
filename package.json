@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@types/body-parser": "^1.19.5"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17"
+  }
+}

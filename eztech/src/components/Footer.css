@@ -1,6 +1,11 @@
 .footer-bg {
-  background-color: rgba(0, 43, 54, 1);
-  padding: 60px 0 120px 0;
+  background: linear-gradient(to bottom, rgb(0, 58, 72) 0%, rgb(0, 29, 40) 100%);
+  padding: 60px 0 60px 0;
+}
+
+.footer-attribute {
+  font-size: 12px;
+  margin-top: 60px;
 }
 
 .footer-images {

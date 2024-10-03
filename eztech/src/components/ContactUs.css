@@ -37,6 +37,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .submit-button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 576px) {
   .contactus-section-bg {
     padding: 70px 40px;

@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { useState } from 'react'; 
 import "./ContactUs.css";
 import emailjs from 'emailjs-com';
+import { useToast } from "./ToastContext";
 
 // Define the types for form data and errors
 interface FormData {
@@ -29,6 +30,7 @@ const ContactUs = () => {
   });
   
   const [errors, setErrors] = useState<FormErrors>({});
+  const showToast = useToast();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -43,7 +45,7 @@ const ContactUs = () => {
     if (!formData.name) newErrors.name = 'Name is required';
     if (!formData.email) {
       newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
       newErrors.email = 'Email address is invalid';
     }
     if (!formData.phone) newErrors.phone = 'Phone number is required';
@@ -51,29 +53,35 @@ const ContactUs = () => {
     return newErrors;
   };
 
-const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  const validationErrors = validate();
-  if (Object.keys(validationErrors).length > 0) {
-    setErrors(validationErrors);
-  } else {
-    emailjs.send('service_q1h2vid', 'template_wwdohim', formData as unknown as Record<string, unknown>, 'A1jQyo0q33kwEboCM')
-    .then((response) => {
-      console.log('Email sent successfully!', response.status, response.text);
-      
-      // Reset form data and errors
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        message: ''
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const validationErrors = validate();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+    } else {
+      emailjs.send('service_q1h2vid', 'template_wwdohim', formData as unknown as Record<string, unknown>, 'A1jQyo0q33kwEboCM')
+      .then((response) => {
+
+        console.log('Email sent successfully!', response.status, response.text);
+
+        //Show toast
+        showToast(`Your message has been sent!<br />Please wait we'll get back to you shortly.`);
+        
+        // Reset form data and errors after sending
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        });
+        setErrors({}); 
+      }, (err) => {
+        console.error('Failed to send email. Error: ', err);
+        showToast('Failed to submit. Please try again.');
       });
-      setErrors({}); 
-    }, (err) => {
-      console.error('Failed to send email. Error: ', err);
-    });
-  }
-};
+    }
+  };
 
   return (
     <div id="contact" className="contactus-section-bg">
@@ -139,7 +147,11 @@ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
                     {errors.message}
                   </Form.Control.Feedback>
                 </Form.Group>
-                <Button type="submit" className="mt-4 primary-button px-4">
+                <Button 
+                  type="submit" 
+                  className="mt-4 primary-button px-4 submit-button"
+                  variant='success'
+                >
                   Submit
                 </Button>
               </Form>

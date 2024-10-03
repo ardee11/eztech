@@ -4,8 +4,7 @@
     width: 100%;
     z-index: 1020;
 }
-
-/* transparent navbar */
+/* transparent navbar when at the hero */
 .navbar-hidden {
     background-color: transparent;
 }
@@ -14,6 +13,7 @@
     color: white;
 }
 
+/*when visible*/
 .navbar-visible {
     background-color: #003d4a !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -27,7 +27,6 @@
 .nav-link:focus,
 .nav-link:active {
     color: #00cd56;
-    /* Change this to your desired hover/focus color */
 }
 
 .navbar-border {
