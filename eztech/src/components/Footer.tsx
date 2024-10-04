@@ -49,7 +49,7 @@ const Footer = () => {
                   <span className="ms-2">Office Address:</span>
                 </div>
                 <div>
-                  Unit 302 The Sycamore Bldg. Buencamino Street
+                  Unit 302 The Sycamore Bldg. Buencamino Street<br />
                   Alabang, Muntinlupa City
                 </div>
               </Col>

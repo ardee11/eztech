@@ -15,7 +15,7 @@ function Partners() {
   return (
     <div id="partner" className="partners-bg">
       <Container>
-        <div className="fs-3 fw-bold mb-5 text-center">
+        <div className="fs-2 mb-5 text-center">
           OUR <span className="text-accent-0">PARTNERS</span>
         </div>
 

@@ -163,7 +163,7 @@ const ContactUs = () => {
             <div className="mb-5">
               <div className="mb-3">
                 <img src="./src/assets/calendar-check.svg" className="contact-images" alt="Office Hours"/>
-                Monday-Friday 8:00 AM - 5:00 PM
+                Monday to Friday 8:00 AM - 5:00 PM
               </div>
               <div className="mb-3">
                 <img src="./src/assets/telephone.svg" className="contact-images" alt="Phone"/>
