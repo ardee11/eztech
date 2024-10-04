@@ -1,11 +1,12 @@
 .footer-bg {
   background: linear-gradient(to bottom, rgb(0, 58, 72) 0%, rgb(0, 29, 40) 100%);
-  padding: 60px 0 60px 0;
+  padding: 60px 0 20px 0;
 }
 
 .footer-attribute {
-  font-size: 12px;
+  font-size: 12px;  
   margin-top: 60px;
+  color: #7d7d7d;
 }
 
 .footer-images {
@@ -17,15 +18,35 @@
   color: rgb(221, 221, 221);
 }
 
-.footer-text {
-  text-align: center;
-  margin-top: 48px;
+.footer-logo:hover {
+  cursor: pointer;
 }
-/*SCREEN SIZE 991 */
 
+.quick-links:hover {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-text3 {
+  text-align: center;
+}
+
+/*SCREEN SIZE 991 */
 @media (max-width: 991px) {
+  .footer-text,
+  .footer-text2,
+  .footer-text3 {
+    margin-top: 24px;
+    text-align: center;
+  }
+
   .footer-text {
-    margin-top: 18px;
-    text-align: left;
+    text-align: center;
+  }
+
+  .footer-logo-container {
+    text-align: center;
+    margin-bottom: 32px;
   }
 }

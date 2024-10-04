@@ -72,3 +72,12 @@
         display: none;
     }
 }
+
+@media (min-width: 991px) {
+    .fs-7 {
+        font-size: 14px;
+    }
+    .contactus-button {
+        font-size: 14px;
+    }
+}

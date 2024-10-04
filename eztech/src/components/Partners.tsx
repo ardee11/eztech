@@ -20,31 +20,31 @@ function Partners() {
         </div>
 
         {screenwidth < 767 && (
-        <Carousel variant="dark">
-          <Carousel.Item interval={4000}>
+        <Carousel pause={false}>
+          <Carousel.Item interval={3000}>
             <img className="carousel-image2" src="src/assets/carousel-mobile1.png" alt="First slide" />
           </Carousel.Item>
-          <Carousel.Item interval={4000}>
+          <Carousel.Item interval={3000}>
             <img className="carousel-image2" src="src/assets/carousel-mobile2.png" alt="Second slide" />
           </Carousel.Item>
-          <Carousel.Item interval={4000}>
+          <Carousel.Item interval={3000}>
             <img className="carousel-image2" src="src/assets/carousel-mobile3.png" alt="Third slide" />
           </Carousel.Item>
-          <Carousel.Item interval={3000}>
+          <Carousel.Item interval={2000}>
             <img className="carousel-image2" src="src/assets/carousel-mobile4.png" alt="Fourth slide" />
           </Carousel.Item>
         </Carousel>
       )}
 
       {screenwidth > 767 && (
-        <Carousel variant="dark">
-          <Carousel.Item interval={5000}>
+        <Carousel>
+          <Carousel.Item interval={3000}>
             <img className="carousel-image" src="src/assets/Carousel1.png" alt="First slide" />
           </Carousel.Item>
-          <Carousel.Item interval={5000}>
+          <Carousel.Item interval={3000}>
             <img className="carousel-image" src="src/assets/Carousel2.png" alt="Second slide" />
           </Carousel.Item>
-          <Carousel.Item interval={4000}>
+          <Carousel.Item interval={2000}>
             <img className="carousel-image" src="src/assets/Carousel3.png" alt="Third slide" />
           </Carousel.Item>
         </Carousel>

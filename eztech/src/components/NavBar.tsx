@@ -34,13 +34,18 @@ function NavBar() {
     });
   };
 
-  // Adjusted to accept a generic MouseEvent
   const scrollToSection = (event: React.MouseEvent<HTMLElement>, sectionId: string) => {
     event.preventDefault();
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsOpen(false);
+  };
+
+  const scrollToTop = (event: React.MouseEvent<HTMLElement>) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     setIsOpen(false);
   };
 
@@ -51,7 +56,7 @@ function NavBar() {
       className={`transition-navbar ${visible ? 'navbar-visible' : 'navbar-hidden'} bg-green`}
     >
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand href="#home" onClick={scrollToTop}>
           <img
             src="src/assets/ezlogo3.png"
             alt="EZTech Logo"
@@ -68,18 +73,18 @@ function NavBar() {
           height={40}
         />
         <Navbar.Collapse id="basic-navbar-nav" in={isOpen}>
-          <Nav className="ms-auto fs-6">
-            <Nav.Link href="#about" className="ms-5" onClick={(e) => scrollToSection(e as React.MouseEvent<HTMLElement>, 'about')}>ABOUT US</Nav.Link>
-            <Nav.Link href="#services" className="ms-5" onClick={(e) => scrollToSection(e as React.MouseEvent<HTMLElement>, 'services')}>OUR SERVICES</Nav.Link>
-            <Nav.Link href="#partner" className="ms-5" onClick={(e) => scrollToSection(e as React.MouseEvent<HTMLElement>, 'partner')}>OUR PARTNERS</Nav.Link>
+          <Nav className="ms-auto fs-7">
+            <Nav.Link href="#about" className="ms-5" onClick={(e) => scrollToSection(e, 'about')}>ABOUT US</Nav.Link>
+            <Nav.Link href="#services" className="ms-5" onClick={(e) => scrollToSection(e, 'services')}>OUR SERVICES</Nav.Link>
+            <Nav.Link href="#partner" className="ms-5" onClick={(e) => scrollToSection(e, 'partner')}>OUR PARTNERS</Nav.Link>
             {isOpen ? (
-              <Nav.Link href="#contact" className="ms-5" onClick={(e) => scrollToSection(e as React.MouseEvent<HTMLElement>, 'contact')}>CONTACT US</Nav.Link>
+              <Nav.Link href="#contact" className="ms-5" onClick={(e) => scrollToSection(e, 'contact')}>CONTACT US</Nav.Link>
             ) : (
               <Button 
                 href="#contact" 
                 variant='success'
                 className={`ms-4 contactus-button ${visible ? 'primary-button' : 'secondary-button'}`}
-                onClick={(e) => scrollToSection(e as React.MouseEvent<HTMLElement>, 'contact')}
+                onClick={(e) => scrollToSection(e, 'contact')}
               >
                 CONTACT US
               </Button>

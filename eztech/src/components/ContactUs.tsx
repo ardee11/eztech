@@ -28,8 +28,9 @@ const ContactUs = () => {
     phone: '',
     message: ''
   });
-  
+
   const [errors, setErrors] = useState<FormErrors>({});
+  const [loading, setLoading] = useState<boolean>(false); // Loading state
   const showToast = useToast();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -53,19 +54,16 @@ const ContactUs = () => {
     return newErrors;
   };
 
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
+      setLoading(true); // Start loading
       emailjs.send('service_q1h2vid', 'template_wwdohim', formData as unknown as Record<string, unknown>, 'A1jQyo0q33kwEboCM')
       .then((response) => {
-
         console.log('Email sent successfully!', response.status, response.text);
-
-        //Show toast
         showToast(`Your message has been sent!<br />Please wait we'll get back to you shortly.`);
         
         // Reset form data and errors after sending
@@ -76,9 +74,11 @@ const ContactUs = () => {
           message: ''
         });
         setErrors({}); 
+        setLoading(false); // Stop loading
       }, (err) => {
         console.error('Failed to send email. Error: ', err);
         showToast('Failed to submit. Please try again.');
+        setLoading(false); // Stop loading
       });
     }
   };
@@ -151,8 +151,9 @@ const ContactUs = () => {
                   type="submit" 
                   className="mt-4 primary-button px-4 submit-button"
                   variant='success'
+                  disabled={loading} // Disable button when loading
                 >
-                  Submit
+                  {loading ? 'Sending...' : 'Submit'} {/* Change button text */}
                 </Button>
               </Form>
             </div>            
