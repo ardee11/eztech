@@ -4,6 +4,7 @@
     width: 100%;
     z-index: 1020;
 }
+
 /* transparent navbar when at the hero */
 .navbar-hidden {
     background-color: transparent;
@@ -13,9 +14,10 @@
     color: white;
 }
 
-/*when visible*/
+/*show when scrolled down*/
 .navbar-visible {
-    background-color: #003d4a !important;
+    background-color: rgba(0, 61, 74, 0.75);
+    backdrop-filter: blur(30px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -46,6 +48,10 @@
 
 .navbar-visible .nav-link.active {
     color: rgb(212, 212, 212);
+}
+
+.contactus-button {
+    border-radius: 6px;
 }
 
 @keyframes gradientAnimation {

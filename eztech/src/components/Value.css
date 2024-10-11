@@ -1,8 +1,16 @@
 .value-section-bg {
   height: 280px;
   background-color: rgba(0, 43, 54, 1);
-  background-image: url('./src/assets/value-bg.png');
   background-size: cover;
+}
+
+.lottie-animation {
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: auto;
+  opacity: 0.8;
 }
 
 .image-width {
@@ -18,24 +26,22 @@
 .title-text {
   font-size: 36px;
   justify-content: center;
+  font-weight: 500;
 }
 
 .icon-container {
   margin-top: 32px;
   position: relative;
-  /* Keep images positioned correctly */
   text-align: center;
-  /* Center images horizontally */
   display: flex;
-  /* Use flex to stack items vertically */
   flex-direction: column;
-  /* Stack children vertically */
   align-items: center;
-  /* Center children horizontally */
 }
 
 .icon-text {
   margin: 24px 0;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .value-card {
@@ -44,14 +50,13 @@
   margin-top: 60px;
   background-color: white;
   border-radius: 10px;
-  border: solid 1px;
-  border-color: rgba(0, 43, 54, 0.6);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
 .value-icon {
-  width: 58px;
+  width: 54px;
   height: auto;
 }
 
@@ -87,6 +92,8 @@
 @media (max-width: 767px) {
   .value-section-bg {
     height: 400px;
+    background-image: url('./src/assets/value-bg.png');
+    background-size: cover;
   }
 
   .value-card {
@@ -101,6 +108,8 @@
 @media (max-width: 576px) {
   .value-section-bg {
     height: auto;
+    background-image: url('./src/assets/value-bg.png');
+    background-size: cover;
   }
 
   .title-text {
@@ -127,4 +136,10 @@
   .value-card:hover .value-icon-hover2 {
     opacity: 1;
   }
+}
+
+.card-ani {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 10%;
 }

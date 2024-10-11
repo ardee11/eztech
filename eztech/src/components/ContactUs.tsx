@@ -162,15 +162,15 @@ const ContactUs = () => {
           <Col xs={12} sm={12} md={12} lg={6}>
             <div className="mb-5">
               <div className="mb-3">
-                <img src="./src/assets/calendar-check.svg" className="contact-images" alt="Office Hours"/>
+                <img src="./src/assets/icons/calendar-check.svg" className="contact-images" alt="Office Hours"/>
                 Monday to Friday 8:00 AM - 5:00 PM
               </div>
               <div className="mb-3">
-                <img src="./src/assets/telephone.svg" className="contact-images" alt="Phone"/>
+                <img src="./src/assets/icons/telephone.svg" className="contact-images" alt="Phone"/>
                 (02) 8691-9608
               </div>
               <div className="mb-3">
-                <img src="./src/assets/envelope.svg" className="contact-images" alt="Email"/>
+                <img src="./src/assets/icons/envelope.svg" className="contact-images" alt="Email"/>
                 sales@eztechit.com
               </div>
             </div>
@@ -189,7 +189,7 @@ const ContactUs = () => {
               Visit Us
             </div>
             <div className="text-center mt-3">
-              <img src="./src/assets/geo.svg" className="contact-images" alt="Location"/>
+              <img src="./src/assets/icons/geo.svg" className="contact-images" alt="Location"/>
               Unit 302 The Sycamore Bldg. Buencamino Street<br />Alabang, Muntinlupa City
             </div>
           </Col>

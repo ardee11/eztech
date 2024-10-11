@@ -1,93 +1,76 @@
+/*background*/
 .services-section-bg {
   background-color: #002B36;
-  padding: 300px 0;
   position: relative;
-  /* Ensure this has relative positioning */
+  height: 650px;
+  padding: 70px 0;
 }
 
-.service-item {
-  transition: transform 0.3s ease;
-  /* Smooth transition for both image and text */
-  max-width: 150px;
-  /* Adjust as needed */
-  margin: 0 auto;
-  /* Center the item */
-}
-
-.service-item img {
-  max-width: 100%;
-  /* Ensure the image is responsive */
+.lottie-animation2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   height: auto;
-  /* Maintain aspect ratio */
+  opacity: 0.65;
 }
 
 .globe-shape {
   opacity: 0.1;
-  zoom: 1.2;
+  zoom: 1;
 }
 
-.moving-gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(25, 252, 13, 0.13), rgba(14, 110, 255, 0.08));
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  z-index: 0;
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+  height: 400px;
+  margin: 0 8px;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 0%;
-    /* Start at the top left */
-  }
-
-  50% {
-    background-position: 100% 100%;
-    /* Move to the bottom right */
-  }
-
-  100% {
-    background-position: 0% 0%;
-    /* Loop back to the start */
-  }
+/*card*/
+.card-services {
+  padding: 20px;
+  background-color: transparent;
+  border: solid 1px;
+  border-radius: 6px;
+  border-color: #DCDCDC;
+  height: 200px;
+  overflow: hidden;
+  transition: height 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
-/* SCREEN SIZE 992 */
-
-@media (max-width: 992px) {
-.services-section-bg {
-    padding: 420px 0;
-  }
+.card-services:hover {
+  height: 400px;
+  background-color: #ebebeb;
 }
 
-/*SCREEN SIZE 767 */
-
-@media (max-width: 767px) {
-  .services-section-bg {
-    padding: 800px 0;
-  }
-  .text-title {
-    margin-bottom: 20px;
-  }
+.card-services .service-icon-hover {
+  display: none;
 }
 
-/*SCREEN SIZE 576 */
-
-@media (max-width: 576px) {
-  .services-section-bg {
-    padding: 780px 0;
-  }
-
-  .text-title {
-    margin-bottom: 20px;
-  }
+.card-services:hover .service-icon {
+  display: none;
 }
 
-@media (min-width: 576px) {
-  .service-item:hover {
-    transform: scale(1.2);
-  }
+.card-services:hover .service-icon-hover {
+  display: block;
+}
+
+/*texts*/
+.hidden-text {
+  display: none;
+}
+.card-services:hover .hidden-text {
+  display: block;
+}
+.service-text {
+  color: white;
+}
+
+.service-text:hover {
+  color: black;
+}
+
+.service-text:hover .desc {
+  color: rgb(45, 45, 45);
 }

@@ -65,7 +65,7 @@ function NavBar() {
           />
         </Navbar.Brand>
         <img 
-          src="./src/assets/toggler-icon.png" 
+          src="./src/assets/icons/toggler-icon.png" 
           className="navbar-toggler" 
           onClick={handleToggle} 
           aria-controls="basic-navbar-nav" 
@@ -73,7 +73,7 @@ function NavBar() {
           height={40}
         />
         <Navbar.Collapse id="basic-navbar-nav" in={isOpen}>
-          <Nav className="ms-auto fs-7">
+          <Nav className="ms-auto fs-7 fw-bold500">
             <Nav.Link href="#about" className="ms-5" onClick={(e) => scrollToSection(e, 'about')}>ABOUT US</Nav.Link>
             <Nav.Link href="#services" className="ms-5" onClick={(e) => scrollToSection(e, 'services')}>OUR SERVICES</Nav.Link>
             <Nav.Link href="#partner" className="ms-5" onClick={(e) => scrollToSection(e, 'partner')}>OUR PARTNERS</Nav.Link>

@@ -1,38 +1,132 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
+import Slider from "react-slick";
 import "./Services.css";
+import Lottie from "lottie-react";
+import animationData from "../assets/lotties/value-bg2.json";
 
 const Services = () => {
+  const services = [
+    {
+      icon: "../src/assets/icons/solution-icon1.png",
+      icon2: "../src/assets/icons/solution-icon1-black.png",
+      title: "IT Hardware and Software Solutions",
+      description: "We provide tailored IT hardware and software solutions to meet your business needs, ensuring optimal performance and productivity."
+    },
+    {
+      icon: "../src/assets/icons/solution-icon2.png",
+      icon2: "../src/assets/icons/solution-icon2-black.png",
+      title: "Network Security Solutions",
+      description: "Safeguard your business with our robust network security solutions. We implement advanced security protocols to protect your systems from threats, ensuring the integrity and confidentiality of your data."
+    },
+    {
+      icon: "../src/assets/icons/solution-icon3.png",
+      icon2: "../src/assets/icons/solution-icon3-black.png",
+      title: "Data Center Optimization Solutions",
+      description: "Safeguard your business with our robust network security solutions. We implement advanced security protocols to protect your systems from threats, ensuring the integrity and confidentiality of your data."
+    },
+    {
+      icon: "../src/assets/icons/solution-icon4.png",
+      icon2: "../src/assets/icons/solution-icon4-black.png",
+      title: "Comprehensive Data Center Preventive Maintenance",
+      description: "Ensure the longevity and reliability of your data center with our preventive maintenance services. We conduct regular assessments and maintenance to identify and resolve potential issues before they escalate."
+    },
+    {
+      icon: "../src/assets/icons/solution-icon5.png",
+      icon2: "../src/assets/icons/solution-icon5-black.png",
+      title: "Disaster Recovery Solutions",
+      description: "Be prepared for the unexpected with our disaster recovery solutions. We develop and implement strategies to ensure business continuity, minimizing downtime and data loss in the event of a disaster."
+    },
+    {
+      icon: "../src/assets/icons/solution-icon6.png",
+      icon2: "../src/assets/icons/solution-icon6-black.png",
+      title: "Enterprise Storage Backup Solutions",
+      description: "Protect your critical data with our enterprise storage backup solutions. We offer scalable and secure backup options to safeguard your information against loss and ensure easy recovery."
+    },
+    {
+      icon: "../src/assets/icons/solution-icon7.png",
+      icon2: "../src/assets/icons/solution-icon7-black.png",
+      title: "Systems Integration",
+      description: "Streamline your operations with our systems integration services. We help you connect disparate systems and applications, enabling seamless communication and improved efficiency across your organization."
+    }
+  ];
+
+  // Slider settings
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 700,
+    autoplay: true,
+    slidesToShow: 4,
+    autoplaySpeed: 2500,
+    cssEase: "linear",
+    arrows: false, 
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
+  };
+
   return (
-    <div id="services" className="position-relative d-flex services-section-bg">
-      <div className="moving-gradient" />
-      <div className="position-absolute top-50 start-50 translate-middle">
-        <img src="./src/assets/globe-vector.svg" className="globe-shape img-fluid" />
-      </div>
+    <div id="services" className="services-section-bg">
+        <Lottie 
+          animationData={animationData} 
+          loop 
+          className="lottie-animation2" 
+        />
       <Container>
-        <div className="position-absolute top-50 start-50 translate-middle">
-          <div className="text-center">
-            <div className="text-accent-0 fs-6">OUR SERVICES</div>
-            <div className="text-white fs-3 fw-bold mb-5">What we do</div>
-          </div>
-          <Row className="justify-content-center">
-            {[
-              { img: "src/assets/services-icon1.svg", title: "IT Hardware and Software Solutions" },
-              { img: "src/assets/services-icon2.svg", title: "Data Center Optimization Solutions" },
-              { img: "src/assets/services-icon3.svg", title: "Network Security Solutions" },
-              { img: "src/assets/services-icon4.svg", title: "Comprehensive Data Center Preventive Maintenance" },
-              { img: "src/assets/services-icon5.svg", title: "Disaster Recovery Solutions" },
-              { img: "src/assets/services-icon6.svg", title: "Enterprise Storage Backup Solutions" },
-              { img: "src/assets/services-icon7.svg", title: "Systems Integration" },
-            ].map((service, index) => (
-              <Col xs={12} sm={8} md={4} lg={3} className="text-center" key={index}>
-                <div className="service-item">
-                  <img className="img-fluid" src={service.img} alt="" />
-                  <div className="text-title text-white mt-3">{service.title}</div>
-                </div>
-              </Col>
-            ))}
-          </Row>
+        <div className="text-center mb-5">
+          <div className="text-accent-0 fs-5">OUR SERVICES</div>
+          <div className="text-white fs-2 fw-bold500">What we do</div>
         </div>
+        <Slider {...settings}>
+          {services.map((service, index) => (
+            <div key={index} className="card-services service-text">
+              <div className="d-flex justify-content-center text-white">
+                <img 
+                  className="service-icon"
+                  src={service.icon} 
+                  width="56px" 
+                  alt="Solution Icon"
+                />
+                <img 
+                  className="service-icon-hover"
+                  src={service.icon2} 
+                  width="56px" 
+                  alt="Solution Icon"
+                />
+              </div>
+              <p className="mt-4 text-center fw-bold500">
+                {service.title}
+              </p>
+              <hr className="mt-1 hidden-text"></hr>
+              <p className="mt-4 fs-7 hidden-text desc">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </Slider>
       </Container>
     </div>
   );

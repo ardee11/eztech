@@ -18,7 +18,6 @@ function Partners() {
         <div className="fs-2 mb-5 text-center">
           OUR <span className="text-accent-0">PARTNERS</span>
         </div>
-
         {screenwidth < 767 && (
         <Carousel pause={false}>
           <Carousel.Item interval={3000}>
@@ -49,7 +48,6 @@ function Partners() {
           </Carousel.Item>
         </Carousel>
       )}
-
       </Container>
     </div>
   );

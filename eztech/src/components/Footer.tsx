@@ -45,7 +45,7 @@ const Footer = () => {
             <Row>
               <Col lg={5} className="footer-text mt-5">
                 <div className="">
-                  <img src='./src/assets/geo-alt-fill.svg' className='footer-images' />
+                  <img src='./src/assets/icons/geo-alt-fill.svg' className='footer-images' />
                   <span className="ms-2">Office Address:</span>
                 </div>
                 <div>
@@ -54,13 +54,13 @@ const Footer = () => {
                 </div>
               </Col>
               <Col lg={3} className="footer-text2 mt-5">
-                <img src='./src/assets/telephone-fill.svg' className='footer-images' />
+                <img src='./src/assets/icons/telephone-fill.svg' className='footer-images' />
                 <span className="ms-2">
                   Tel: (02) 8691-9608
                 </span>
               </Col>
               <Col lg={4} className="footer-text3 mt-5">
-                <img src='./src/assets/envelope-fill.svg' className='footer-images' />
+                <img src='./src/assets/icons/envelope-fill.svg' className='footer-images' />
                 <span className="ms-2">
                   Email: sales@eztechit.com
                 </span>

@@ -1,6 +1,5 @@
 .about-section-bg {
-  padding: 80px 0;
-  /* Add some vertical spacing */
+  padding: 100px 0;
 }
 
 .image-placeholder {
@@ -41,6 +40,18 @@
 
   .image-placeholder {
     height: 300px;
-    /* Reduce height on mobile */
   }
+}
+
+.about-image-showUp {
+  animation: showUp 0.5s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.about-text-slideUp {
+  opacity: 0;
+  animation: slideUp 0.5s ease forwards;
+  animation-timeline: view();
+  animation-range: entry 20%;
 }
