@@ -2,7 +2,6 @@
 .services-section-bg {
   background-color: #002B36;
   position: relative;
-  height: 650px;
   padding: 70px 0;
 }
 
@@ -23,8 +22,8 @@
 .slick-slide > div {
   display: flex;
   justify-content: center;
-  height: 400px;
   margin: 0 8px;
+  /* height: 400px; */
 }
 
 /*card*/
@@ -73,4 +72,45 @@
 
 .service-text:hover .desc {
   color: rgb(45, 45, 45);
+}
+
+@media (max-width: 991px) {
+  .card-services:hover {
+    height: 500px;
+  }
+}
+
+@media (max-width: 776px) {
+  .card-services:hover {
+    height: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-services:hover {
+    height: 400px;
+  }
+
+  .lottie-animation2 {
+    position: absolute;
+    bottom: 0;
+    left: -140%;
+    width: 400%;
+    height: auto;
+    opacity: 0.65;
+  }
+
+  .card-services {
+    padding: 20px;
+    background-color: transparent;
+    border: solid 1px;
+    border-radius: 6px;
+    border-color: #DCDCDC;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .card-services .hidden-text {
+    display: block;
+  }
 }

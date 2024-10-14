@@ -3,6 +3,12 @@
   padding: 100px 0;
 }
 
+.map-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 14px 14px 16px rgba(0, 0, 0, 0.13);
+}
+
 .message-bg {
   padding: 50px;
   border-radius: 16px;

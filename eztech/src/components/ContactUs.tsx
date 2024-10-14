@@ -178,7 +178,6 @@ const ContactUs = () => {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d241.49898549337868!2d121.02258151998126!3d14.428099010722535!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x348b5c4713ba17a8!2sEZTech%20IT%20Solutions!5e0!3m2!1sen!2sph!4v1632665293335!5m2!1sen!2sph"
                 height="380"
-                style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 className="w-100"
