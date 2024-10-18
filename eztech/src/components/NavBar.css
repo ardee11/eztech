@@ -11,7 +11,7 @@
 }
 
 .navbar-hidden .nav-link {
-    color: white;
+    color: rgb(221, 221, 221);
 }
 
 /*show when scrolled down*/

@@ -63,8 +63,8 @@ const Hero = () => {
         <Row className="align-items-center" style={{ height: '100vh' }}>
           <Col sm={12} md={8} lg={6}>
             <div className="text-container">
-              <h1 className="responsive-h1 fw-bold text-white">YOUR IT NEEDS MADE EASY</h1>
-              <p className="fs-5 text-white mb-5">Providing the best fit for your company</p>
+              <h1 className="responsive-h1">YOUR IT NEEDS MADE EASY</h1>
+              <p className="text-subhead mb-5">Providing the best fit for your company</p>
             </div>
           </Col>
         </Row>

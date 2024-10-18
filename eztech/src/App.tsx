@@ -10,6 +10,7 @@ import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
 import "./App.css";
 import { ToastProvider } from "./components/ToastContext";
+import Summary from "./components/Summary";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
     <ToastProvider>
       <NavBar />
       <Hero />
+      <Summary />
       <AboutUs />
       <Value />
       <Mission />

@@ -13,7 +13,7 @@ const Value = () => {
       />
       <Container>
         <Row className="d-flex">
-          <div className="text-white d-flex title-text pt-4 mt-4">WE VALUE</div>
+          <div className="fw-bold500 text-white d-flex title-text pt-4 mt-4">WE VALUE</div>
         </Row>
         <Row className="card-div d-flex card-ani">
           <Col xs={6} sm={5} md={4} lg={3}>

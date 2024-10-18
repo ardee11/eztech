@@ -65,11 +65,11 @@ const Footer = () => {
                   Email: sales@eztechit.com
                 </span>
               </Col>
-              <Row>
+              {/* <Row>
                 <Col lg={12} className="footer-attribute">
                 <p>Image from <Alert.Link href="https://www.freepik.com/" target='_blank'>FreePik</Alert.Link> and Icons from <Alert.Link href="https://www.flaticon.com/" target='_blank'>Flaticon</Alert.Link></p>
                 </Col>
-              </Row>
+              </Row> */}
             </Row>
           </Container>
         </div>

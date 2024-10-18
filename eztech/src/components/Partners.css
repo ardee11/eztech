@@ -2,11 +2,8 @@
   padding: 70px 0 60px 0;
   position: relative;
   display: flex;
-  /* Added for centering content */
   align-items: center;
-  /* Vertically center the content */
   justify-content: center;
-  /* Horizontally center the content */
 }
 
 .carousel-image {
