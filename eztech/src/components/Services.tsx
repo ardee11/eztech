@@ -25,7 +25,7 @@ const Services = () => {
       icon: "../src/assets/icons/solution-icon3.png",
       icon2: "../src/assets/icons/solution-icon3-black.png",
       title: "Data Center Optimization Solutions",
-      description: "Safeguard your business with our robust network security solutions. We implement advanced security protocols to protect your systems from threats, ensuring the integrity and confidentiality of your data."
+      description: "Maximize efficiency and performance in your data center with our optimization solutions. We assess your infrastructure to enhance resource utilization, reduce energy consumption, and improve overall system reliability."
     },
     {
       icon: "../src/assets/icons/solution-icon4.png",
