@@ -6,48 +6,62 @@ import "./Services.css";
 import Lottie from "lottie-react";
 import animationData from "../assets/lotties/value-bg2.json";
 import { Reveal } from "./Reveal";
+import service_icon1 from '../assets/icons/solution-icon1.png';
+import service_icon1_2 from '../assets/icons/solution-icon1-black.png';
+import service_icon2 from '../assets/icons/solution-icon2.png';
+import service_icon2_2 from '../assets/icons/solution-icon2-black.png';
+import service_icon3 from '../assets/icons/solution-icon3.png';
+import service_icon3_2 from '../assets/icons/solution-icon3-black.png';
+import service_icon4 from '../assets/icons/solution-icon4.png';
+import service_icon4_2 from '../assets/icons/solution-icon4-black.png';
+import service_icon5 from '../assets/icons/solution-icon5.png';
+import service_icon5_2 from '../assets/icons/solution-icon5-black.png';
+import service_icon6 from '../assets/icons/solution-icon6.png';
+import service_icon6_2 from '../assets/icons/solution-icon6-black.png';
+import service_icon7 from '../assets/icons/solution-icon7.png';
+import service_icon7_2 from '../assets/icons/solution-icon7-black.png';
 
 const Services = () => {
   const services = [
     {
-      icon: "../src/assets/icons/solution-icon1.png",
-      icon2: "../src/assets/icons/solution-icon1-black.png",
+      icon: service_icon1,
+      icon2: service_icon1_2,
       title: "IT Hardware and Software Solutions",
       description: "We provide tailored IT hardware and software solutions to meet your business needs, ensuring optimal performance and productivity."
     },
     {
-      icon: "../src/assets/icons/solution-icon2.png",
-      icon2: "../src/assets/icons/solution-icon2-black.png",
+      icon: service_icon2,
+      icon2: service_icon2_2,
       title: "Network Security Solutions",
       description: "Safeguard your business with our robust network security solutions. We implement advanced security protocols to protect your systems from threats, ensuring the integrity and confidentiality of your data."
     },
     {
-      icon: "../src/assets/icons/solution-icon3.png",
-      icon2: "../src/assets/icons/solution-icon3-black.png",
+      icon: service_icon3,
+      icon2: service_icon3_2,
       title: "Data Center Optimization Solutions",
       description: "Maximize efficiency and performance in your data center with our optimization solutions. We assess your infrastructure to enhance resource utilization, reduce energy consumption, and improve overall system reliability."
     },
     {
-      icon: "../src/assets/icons/solution-icon4.png",
-      icon2: "../src/assets/icons/solution-icon4-black.png",
+      icon: service_icon4,
+      icon2: service_icon4_2,
       title: "Comprehensive Data Center Preventive Maintenance",
       description: "Ensure the longevity and reliability of your data center with our preventive maintenance services. We conduct regular assessments and maintenance to identify and resolve potential issues before they escalate."
     },
     {
-      icon: "../src/assets/icons/solution-icon5.png",
-      icon2: "../src/assets/icons/solution-icon5-black.png",
+      icon: service_icon5,
+      icon2: service_icon5_2,
       title: "Disaster Recovery Solutions",
       description: "Be prepared for the unexpected with our disaster recovery solutions. We develop and implement strategies to ensure business continuity, minimizing downtime and data loss in the event of a disaster."
     },
     {
-      icon: "../src/assets/icons/solution-icon6.png",
-      icon2: "../src/assets/icons/solution-icon6-black.png",
+      icon: service_icon6,
+      icon2: service_icon6_2,
       title: "Enterprise Storage Backup Solutions",
       description: "Protect your critical data with our enterprise storage backup solutions. We offer scalable and secure backup options to safeguard your information against loss and ensure easy recovery."
     },
     {
-      icon: "../src/assets/icons/solution-icon7.png",
-      icon2: "../src/assets/icons/solution-icon7-black.png",
+      icon: service_icon7,
+      icon2: service_icon7_2,
       title: "Systems Integration",
       description: "Streamline your operations with our systems integration services. We help you connect disparate systems and applications, enabling seamless communication and improved efficiency across your organization."
     }

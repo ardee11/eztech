@@ -4,6 +4,7 @@ import './Hero.css';
 import Lottie from 'lottie-react';
 import animationData from '../assets/lotties/hero-bg.json';
 import { Reveal } from './Reveal';
+import imgHero2Url from '../assets/hero-main2.png'
 
 const Hero = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 767);
@@ -24,7 +25,7 @@ const Hero = () => {
   return (
     <header className="hero-section position-relative">
       <img 
-        src="src/assets/hero-main2.png"
+        src={imgHero2Url}
         className="img-fluid w-100"
         alt="Hero"
       />

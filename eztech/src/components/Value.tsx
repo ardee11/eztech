@@ -3,6 +3,11 @@ import "./Value.css";
 import Lottie from "lottie-react";
 import animationData from "../assets/lotties/value-bg2.json";
 import { Reveal } from "./Reveal";
+import progressIcon from '../assets/icons/value-icon1.png';
+import progressIconGif from '../assets/icons/value-icon1.gif';
+import efficiencyIcon from '../assets/icons/value-icon2.png';
+import efficiencyIconGif from '../assets/icons/value-icon2.gif';
+import selflessIcon from '../assets/icons/value-icon3.png';
 
 const Value = () => {
   return (
@@ -25,12 +30,12 @@ const Value = () => {
                 <div className="icon-container">
                   <img
                     className="value-icon"
-                    src="./src/assets/icons/value-icon1.png"
+                    src={progressIcon}
                     alt="Progress Icon"
                   />
                   <img
                     className="value-icon-hover"
-                    src="./src/assets/icons/value-icon1.gif"
+                    src={progressIconGif}
                     alt="Selfless Icon Hover"
                   />
                 </div>
@@ -44,12 +49,12 @@ const Value = () => {
                 <div className="icon-container">
                   <img
                     className="value-icon"
-                    src="./src/assets/icons/value-icon2.png"
+                    src={efficiencyIcon}
                     alt="Efficiency Icon"
                   />
                   <img
                     className="value-icon-hover"
-                    src="./src/assets/icons/value-icon2.gif"
+                    src={efficiencyIconGif}
                     alt="Selfless Icon Hover"
                   />
                 </div>
@@ -63,12 +68,12 @@ const Value = () => {
                 <div className="icon-container">
                   <img
                     className="value-icon"
-                    src="./src/assets/icons/value-icon3.png"
+                    src={selflessIcon}
                     alt="Selfless Icon"
                   />
                   <img
                     className="value-icon-hover"
-                    src="./src/assets/icons/value-icon3.png"
+                    src={selflessIcon}
                     alt="Selfless Icon Hover"
                   />
                 </div>

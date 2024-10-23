@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button } from 'react-bootstrap';
 import './NavBar.css';
+import eztechlogo from '../assets/ezlogo3.png';
+import navtoggle from '../assets/icons/toggler-icon.png';
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,14 +60,14 @@ function NavBar() {
       <Container>
         <Navbar.Brand href="#home" onClick={scrollToTop}>
           <img
-            src="src/assets/ezlogo3.png"
+            src={eztechlogo}
             alt="EZTech Logo"
             height="69"
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
         <img 
-          src="./src/assets/icons/toggler-icon.png" 
+          src={navtoggle} 
           className="navbar-toggler" 
           onClick={handleToggle} 
           aria-controls="basic-navbar-nav" 

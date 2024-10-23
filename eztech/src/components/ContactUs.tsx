@@ -6,6 +6,11 @@ import "./ContactUs.css";
 import emailjs from 'emailjs-com';
 import { useToast } from "./ToastContext";
 import { Reveal } from "./Reveal";
+import calendar_icon from '../assets/icons/calendar-check.svg';
+import telephone_icon from '../assets/icons/telephone.svg';
+import envelope_icon from '../assets/icons/envelope.svg';
+import location_icon from '../assets/icons/geo.svg';
+
 
 // Define the types for form data and errors
 interface FormData {
@@ -155,7 +160,7 @@ const ContactUs = () => {
                     variant='success'
                     disabled={loading} // Disable button when loading
                   >
-                    {loading ? 'Sending...' : 'Submit'} {/* Change button text */}
+                    {loading ? 'Sending...' : 'Submit'}
                   </Button>
                 </Form>
               </div>            
@@ -164,15 +169,15 @@ const ContactUs = () => {
             <Col xs={12} sm={12} md={12} lg={6}>
               <div className="mb-5">
                 <div className="mb-3">
-                  <img src="./src/assets/icons/calendar-check.svg" className="contact-images" alt="Office Hours"/>
+                  <img src={calendar_icon} className="contact-images" alt="Office Hours"/>
                   Monday to Friday 8:00 AM - 5:00 PM
                 </div>
                 <div className="mb-3">
-                  <img src="./src/assets/icons/telephone.svg" className="contact-images" alt="Phone"/>
+                  <img src={telephone_icon} className="contact-images" alt="Phone"/>
                   (02) 8691-9608
                 </div>
                 <div className="mb-3">
-                  <img src="./src/assets/icons/envelope.svg" className="contact-images" alt="Email"/>
+                  <img src={envelope_icon} className="contact-images" alt="Email"/>
                   sales@eztechit.com
                 </div>
               </div>
@@ -190,7 +195,7 @@ const ContactUs = () => {
                 Visit Us
               </div>
               <div className="text-center mt-3">
-                <img src="./src/assets/icons/geo.svg" className="contact-images" alt="Location"/>
+                <img src={location_icon} className="contact-images" alt="Location"/>
                 Unit 302 The Sycamore Bldg. Buencamino Street<br />Alabang, Muntinlupa City
               </div>
             </Col>

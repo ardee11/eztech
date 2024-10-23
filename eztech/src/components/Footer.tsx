@@ -1,5 +1,9 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import "./Footer.css";
+import logo from '../assets/ezlogo3.png';
+import envelope_icon from '../assets/icons/envelope-fill.svg';
+import telephone_icon from '../assets/icons/telephone-fill.svg';
+import location_icon from '../assets/icons/geo-alt-fill.svg';
 
 const Footer = () => {
   const scrollToSection = (event: React.MouseEvent<HTMLElement>, sectionId: string) => {
@@ -25,7 +29,7 @@ const Footer = () => {
                 <div>
                   <img 
                     className="footer-logo"
-                    src="./src/assets/ezlogo3.png"             
+                    src={logo}            
                     alt="EZTech Logo"
                     height="90" 
                     onClick={scrollToTop}
@@ -45,7 +49,7 @@ const Footer = () => {
             <Row>
               <Col lg={5} className="footer-text mt-5">
                 <div className="">
-                  <img src='./src/assets/icons/geo-alt-fill.svg' className='footer-images' />
+                  <img src={location_icon} className='footer-images' />
                   <span className="ms-2">Office Address:</span>
                 </div>
                 <div>
@@ -54,13 +58,13 @@ const Footer = () => {
                 </div>
               </Col>
               <Col lg={3} className="footer-text2 mt-5">
-                <img src='./src/assets/icons/telephone-fill.svg' className='footer-images' />
+                <img src={telephone_icon} className='footer-images' />
                 <span className="ms-2">
                   Tel: (02) 8691-9608
                 </span>
               </Col>
               <Col lg={4} className="footer-text3 mt-5">
-                <img src='./src/assets/icons/envelope-fill.svg' className='footer-images' />
+                <img src={envelope_icon} className='footer-images' />
                 <span className="ms-2">
                   Email: sales@eztechit.com
                 </span>
