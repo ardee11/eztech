@@ -11,7 +11,7 @@
 
 .text-main {
   font-size: 54px;
-  color: rgb(198, 198, 198);
+  color: rgb(209, 209, 209);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,7 +19,7 @@
 
 .text-main .text-sub {
   font-size: 16px;
-  color: rgb(181, 181, 181);
+  color: rgb(192, 192, 192);
   margin-left: 15px;
 }
 
