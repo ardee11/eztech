@@ -4,8 +4,8 @@
 
 .vision-shape {
   background-color: #00AC47;
-  height: 200px;
-  width: auto;
+  height: 230px;
+  width: 10px;
 }
 
 .image-placeholder3 {
@@ -21,21 +21,11 @@
   animation-range: entry 0% cover 40%;
 }
 
-.vision-text-slideUp {
-  opacity: 0;
-  animation: slideUp 0.5s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 10%;
-}
-
 /* SCREEN SIZE 991 */
 
 @media (max-width: 991px) {
-  .mobile-margin {
-    margin-top: 20px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
+  .vision-section-bg {
+    padding: 20px 0 60px 0;
   }
 
   .vision-shape {

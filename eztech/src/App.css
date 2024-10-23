@@ -2,11 +2,8 @@
 
 body {
   font-family: 'Montserrat', Arial;
-  /* Set the global font */
   margin: 0;
-  /* Remove default margin */
   padding: 0;
-  /* Remove default padding */
   background-color: #FFFFFF;
 }
 
@@ -24,6 +21,14 @@ body {
 
 .fw-bold600 {
   font-weight: 600;
+}
+
+.text-margin-left {
+  margin-left: 40px;
+}
+
+.text-margin-right {
+  margin-right: 80px;
 }
 
 .inline-container {
@@ -63,42 +68,6 @@ body {
   background-color: #00c050;
 }
 
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(150px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes showUp {
-  from {
-    opacity: 0;
-    clip-path: inset(100% 100% 0 0);
-  }
-
-  to {
-    opacity: 1;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
-@keyframes showUp2 {
-  from {
-    opacity: 0;
-    clip-path: inset(100% 0 0 100%);
-  }
-
-  to {
-    opacity: 1;
-    clip-path: inset(0 0 0 0);
-  }
-}
-
 @keyframes appear {
   from {
     opacity: 0;
@@ -108,6 +77,27 @@ body {
   to {
     opacity: 1;
     scale: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .mobile-margin {
+    margin-top: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .aboutus-shape, .vision-shape, .mission-shape {
+    display: none;
+  }
+
+  .text-margin-left {
+    margin-left: 0;
+  }
+
+  .text-margin-right {
+    margin-right: 0;
   }
 }
 

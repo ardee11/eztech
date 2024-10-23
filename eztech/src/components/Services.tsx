@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "./Services.css";
 import Lottie from "lottie-react";
 import animationData from "../assets/lotties/value-bg2.json";
+import { Reveal } from "./Reveal";
 
 const Services = () => {
   const services = [
@@ -96,37 +97,39 @@ const Services = () => {
           className="lottie-animation2" 
         />
       <Container>
-        <div className="text-center mb-5">
-          <div className="text-accent-0 fs-5">OUR SERVICES</div>
-          <div className="text-white fs-2 fw-bold500">What we do</div>
-        </div>
-        <Slider {...settings}>
-          {services.map((service, index) => (
-            <div key={index} className="card-services service-text">
-              <div className="d-flex justify-content-center text-white">
-                <img 
-                  className="service-icon"
-                  src={service.icon} 
-                  width="56px" 
-                  alt="Solution Icon"
-                />
-                <img 
-                  className="service-icon-hover"
-                  src={service.icon2} 
-                  width="56px" 
-                  alt="Solution Icon"
-                />
+        <Reveal>
+          <div className="text-center mb-5">
+            <div className="text-accent-0 fs-5">OUR SERVICES</div>
+            <div className="text-white fs-2 fw-bold500">What we do</div>
+          </div>
+          <Slider {...settings}>
+            {services.map((service, index) => (
+              <div key={index} className="card-services service-text">
+                <div className="d-flex justify-content-center text-white">
+                  <img 
+                    className="service-icon"
+                    src={service.icon} 
+                    width="56px" 
+                    alt="Solution Icon"
+                  />
+                  <img 
+                    className="service-icon-hover"
+                    src={service.icon2} 
+                    width="56px" 
+                    alt="Solution Icon"
+                  />
+                </div>
+                <p className="mt-4 text-center fw-bold500">
+                  {service.title}
+                </p>
+                <hr className="mt-1 hidden-text"></hr>
+                <p className="mt-4 fs-7 hidden-text desc">
+                  {service.description}
+                </p>
               </div>
-              <p className="mt-4 text-center fw-bold500">
-                {service.title}
-              </p>
-              <hr className="mt-1 hidden-text"></hr>
-              <p className="mt-4 fs-7 hidden-text desc">
-                {service.description}
-              </p>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        </Reveal>
       </Container>
     </div>
   );

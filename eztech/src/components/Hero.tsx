@@ -3,6 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import './Hero.css';
 import Lottie from 'lottie-react';
 import animationData from '../assets/lotties/hero-bg.json';
+import { Reveal } from './Reveal';
 
 const Hero = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 767);
@@ -27,45 +28,30 @@ const Hero = () => {
         className="img-fluid w-100"
         alt="Hero"
       />
-      {!isSmallScreen && (
-        <Lottie 
-          lottieRef={lottieRef}
-          animationData={animationData} 
-          loop={false} // Disable looping
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: '-30%', 
-            width: '100%', 
-            height: '100%',
-            opacity: 0.1,
-            zIndex: 0, 
-          }} 
-        />
-      )}
-      {isSmallScreen && (
-        <Lottie 
-          lottieRef={lottieRef}
-          animationData={animationData} 
-          loop={false} // Disable looping
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: '-160%', 
-            width: '300%', 
-            height: '100%',
-            opacity: 0.1,
-            zIndex: 0, 
-          }} 
-        />
-      )}
+      <Lottie 
+        lottieRef={lottieRef}
+        animationData={animationData} 
+        loop={false}
+        autoplay={false}
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: isSmallScreen ? '-160%' : '-30%', 
+          width: isSmallScreen ? '300%' : '100%', 
+          height: '100%',
+          opacity: 0.1,
+          zIndex: 0, 
+        }} 
+      />
       <Container className="position-relative">
         <Row className="align-items-center" style={{ height: '100vh' }}>
-          <Col sm={12} md={8} lg={6}>
-            <div className="text-container">
+          <Col className="mobile-layout" sm={12} md={8} lg={6}>
+            <Reveal duration={0.7}>
               <h1 className="responsive-h1">YOUR IT NEEDS MADE EASY</h1>
-              <p className="text-subhead mb-5">Providing the best fit for your company</p>
-            </div>
+            </Reveal>
+            <Reveal duration={0.8} delay={0.7}>
+              <p className="text-subhead">Providing the best fit for your company</p>
+            </Reveal>
           </Col>
         </Row>
       </Container>

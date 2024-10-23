@@ -12,8 +12,8 @@
 
 .mission-shape {
   background-color: #0066DA;
-  height: 200px;
-  width: auto
+  height: 230px;
+  width: 10px;
 }
 
 .mission-image-showUp {
@@ -22,30 +22,7 @@
   animation-range: entry 0% cover 40%;
 }
 
-.mission-text-slideUp {
-  opacity: 0;
-  animation: slideUp 0.5s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 20%;
-}
-
-/* SCREEN SIZE 992 */
-
-@media (max-width: 992px) {
-  .mobile-margin {
-    margin-top: 20px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .mission-shape {
-    display: none;
-  }
-}
-
 /*SCREEN SIZE 576 */
-
 @media (max-width: 576px) {
   .mission-section-bg {
     padding: 40px 0;

@@ -1,13 +1,17 @@
 import { Container, Row, Col } from "react-bootstrap";
 import "./Vision.css";
+import { Reveal } from "./Reveal";
 
 const Vision = () => {
   return (
     <div className="d-flex vision-section-bg">
       <Container>
+        <Reveal>
         <Row className="align-items-center justify-content-between">
-          <div className="px-1 vision-shape vision-text-slideUp" />
-          <Col xs={12} md={12} lg={4} className="d-flex flex-column vision-text-slideUp">
+          <Col>
+          <div className="px-1 vision-shape" />
+          </Col>
+          <Col xs={12} md={12} lg={4} className="d-flex flex-column text-margin-right">
             <div className="fs-3 fw-bold500 mobile-margin">VISION</div>
             <div className="fs-6 justify mt-3 mb-3">
               A top-notch IT Solutions Provider leading the industry in satisfying 
@@ -15,9 +19,10 @@ const Vision = () => {
             </div>
           </Col>
           <Col xs={12} md={12} lg={6}>
-            <div className="image-placeholder3 vision-image-showUp" />
+            <div className="image-placeholder3" />
           </Col>
         </Row>
+        </Reveal>
       </Container>
     </div>
   );

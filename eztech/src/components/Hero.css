@@ -29,12 +29,21 @@
   z-index: 1;
 }
 
-.text-container {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 0.5s ease forwards;
-}
-
 .show {
   opacity: 1;
+}
+
+@media (max-width: 576px) {
+
+  .mobile-layout {
+    text-align: center;
+  }
+  .mobile-layout .responsive-h1 {
+    font-size: 56px;
+  }
+
+  .mobile-layout .text-subhead {
+    font-size: 18px;
+    margin-top: 12px;
+  }
 }
