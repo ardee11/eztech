@@ -60,7 +60,7 @@ const Services = () => {
     speed: 700,
     autoplay: true,
     slidesToShow: 4,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
     cssEase: "linear",
     arrows: false, 
     pauseOnHover: true,
@@ -70,6 +70,8 @@ const Services = () => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          speed: 900,
+          autoplaySpeed: 3000,
         }
       },
       {
@@ -77,6 +79,7 @@ const Services = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          autoplaySpeed: 2500,
         }
       },
       {
@@ -84,6 +87,7 @@ const Services = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplaySpeed: 2500,
         }
       }
     ]
