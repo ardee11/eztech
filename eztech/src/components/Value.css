@@ -4,6 +4,11 @@
   background-size: cover;
 }
 
+.background-img {
+  position: absolute;
+  height: 100%;
+}
+
 .lottie-animation {
   position: absolute;
   bottom: 0;

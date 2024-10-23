@@ -1,6 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import "./Footer.css";
-import logo from '../assets/ezlogo3.png';
+import logo from '../assets/ezlogo.png';
 import envelope_icon from '../assets/icons/envelope-fill.svg';
 import telephone_icon from '../assets/icons/telephone-fill.svg';
 import location_icon from '../assets/icons/geo-alt-fill.svg';

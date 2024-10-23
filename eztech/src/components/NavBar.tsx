@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Button } from 'react-bootstrap';
 import './NavBar.css';
-import eztechlogo from '../assets/ezlogo3.png';
+import eztechlogo from '../assets/ezlogo.png';
 import navtoggle from '../assets/icons/toggler-icon.png';
 
 function NavBar() {

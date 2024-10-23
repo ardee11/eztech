@@ -20,6 +20,8 @@ import service_icon6 from '../assets/icons/solution-icon6.png';
 import service_icon6_2 from '../assets/icons/solution-icon6-black.png';
 import service_icon7 from '../assets/icons/solution-icon7.png';
 import service_icon7_2 from '../assets/icons/solution-icon7-black.png';
+import background from '../assets/value-bg.png';
+import { useEffect, useState } from "react";
 
 const Services = () => {
   const services = [
@@ -107,13 +109,35 @@ const Services = () => {
     ]
   };
 
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 767);
+
+  const handleResize = () => {
+    setIsSmallScreen(window.innerWidth < 767);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div id="services" className="services-section-bg">
+      {!isSmallScreen && (
         <Lottie 
           animationData={animationData} 
           loop 
           className="lottie-animation2" 
         />
+      )}
+      {isSmallScreen && (
+        <img 
+          src={background}
+          className="background-img"
+        />
+      )}
       <Container>
         <Reveal>
           <div className="text-center mb-5">

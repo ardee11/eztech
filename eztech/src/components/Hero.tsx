@@ -4,7 +4,7 @@ import './Hero.css';
 import Lottie from 'lottie-react';
 import animationData from '../assets/lotties/hero-bg.json';
 import { Reveal } from './Reveal';
-import imgHero2Url from '../assets/hero-main2.png'
+import imgHero2Url from '../assets/hero-main2.png';
 
 const Hero = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 767);

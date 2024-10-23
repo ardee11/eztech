@@ -6,6 +6,11 @@
   overflow: hidden;
 }
 
+.background-img {
+  position: absolute;
+  height: 100%;
+}
+
 .lottie-animation2 {
   position: absolute;
   bottom: 0;
