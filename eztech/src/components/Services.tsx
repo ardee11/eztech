@@ -60,7 +60,7 @@ const Services = () => {
     speed: 700,
     autoplay: true,
     slidesToShow: 4,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 2000,
     cssEase: "linear",
     arrows: false, 
     pauseOnHover: true,
