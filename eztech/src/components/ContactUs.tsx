@@ -67,7 +67,7 @@ const ContactUs = () => {
       setErrors(validationErrors);
     } else {
       setLoading(true); // Start loading
-      emailjs.send('service_q1h2vid', 'template_wwdohim', formData as unknown as Record<string, unknown>, 'A1jQyo0q33kwEboCM')
+      emailjs.send('service_s0b6thj', 'template_j2bcnk8', formData as unknown as Record<string, unknown>, 'jJgT7YcI9bgDFwLKz')
       .then((response) => {
         console.log('Email sent successfully!', response.status, response.text);
         showToast(`Your message has been sent!<br />Please wait we'll get back to you shortly.`);
