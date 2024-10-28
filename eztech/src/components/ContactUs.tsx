@@ -101,7 +101,7 @@ const ContactUs = () => {
                   <div className="text-accent-0 fw-bold d-flex">Send us a message!</div>
                 </div>
                 <Form onSubmit={handleSubmit}>
-                  <Form.Group className="margin-form" controlId="formName">
+                  <Form.Group controlId="formName">
                     <Form.Label>Name</Form.Label>
                     <Form.Control
                       type="text"
@@ -114,7 +114,7 @@ const ContactUs = () => {
                       {errors.name}
                     </Form.Control.Feedback>
                   </Form.Group>
-                  <Form.Group className="margin-form" controlId="formEmail">
+                  <Form.Group controlId="formEmail">
                     <Form.Label>Email</Form.Label>
                     <Form.Control
                       type="email"
@@ -127,7 +127,7 @@ const ContactUs = () => {
                       {errors.email}
                     </Form.Control.Feedback>
                   </Form.Group>
-                  <Form.Group className="margin-form" controlId="formPhone">
+                  <Form.Group controlId="formPhone">
                     <Form.Label>Contact Number</Form.Label>
                     <Form.Control
                       type="number"
@@ -140,7 +140,7 @@ const ContactUs = () => {
                       {errors.phone}
                     </Form.Control.Feedback>
                   </Form.Group>
-                  <Form.Group className="margin-form" controlId="formMessage">
+                  <Form.Group controlId="formMessage">
                     <Form.Label>Message</Form.Label>
                     <Form.Control
                       as="textarea"
