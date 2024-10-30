@@ -16,9 +16,9 @@
 
 /*show when scrolled down*/
 .navbar-visible {
-    background-color: rgba(0, 61, 74, 0.75);
+    background-color: rgba(0, 61, 74, 0.85);
     backdrop-filter: blur(30px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-visible .nav-link {

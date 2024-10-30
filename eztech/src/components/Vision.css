@@ -15,12 +15,6 @@
   max-width: 100%;
 }
 
-.vision-image-showUp {
-  animation: showUp2 0.5s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
 /* SCREEN SIZE 991 */
 
 @media (max-width: 991px) {

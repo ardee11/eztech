@@ -16,12 +16,6 @@
   width: 12px;
 }
 
-.mission-image-showUp {
-  animation: showUp 0.5s ease forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
-}
-
 /*SCREEN SIZE 576 */
 @media (max-width: 576px) {
   .mission-section-bg {
