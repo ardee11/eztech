@@ -25,7 +25,7 @@ function Partners() {
     <div id="partner" className="partners-bg">
       <Container>
         <Reveal>
-          <div className="fs-2 mb-5 text-center">
+          <div className="fs-2 mt-3 mb-5 text-center">
             OUR <span className="text-accent-0">PARTNERS</span>
           </div>
           {screenwidth < 767 && (

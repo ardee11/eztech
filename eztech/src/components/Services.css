@@ -2,7 +2,7 @@
 .services-section-bg {
   background-color: #002B36;
   position: relative;
-  padding: 70px 0;
+  padding: 60px 0;
   overflow: hidden;
 }
 
@@ -39,13 +39,13 @@
   border: solid 1px;
   border-radius: 6px;
   border-color: #DCDCDC;
-  height: 200px;
+  height: 440px;
   overflow: hidden;
   transition: height 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
 
 .card-services:hover {
-  height: 400px;
+  /*height: 400px;*/
   background-color: #ebebeb;
 }
 
@@ -62,9 +62,11 @@
 }
 
 /*texts*/
+/*
 .hidden-text {
   display: none;
 }
+  */
 .card-services:hover .hidden-text {
   display: block;
 }
@@ -80,41 +82,30 @@
   color: rgb(45, 45, 45);
 }
 
-@media (max-width: 991px) {
-  .card-services:hover {
-    height: 500px;
-  }
+.desc {
+  font-size: 14px;
 }
 
-@media (max-width: 776px) {
-  .card-services:hover {
+@media (max-width: 991px) {
+  .card-services {
     height: 500px;
   }
 }
 
 @media (max-width: 576px) {
-  .card-services:hover {
-    height: 400px;
-  }
-
-  .lottie-animation2 {
-    position: absolute;
-    bottom: 0;
-    left: -140%;
-    width: 400%;
-    height: auto;
-    opacity: 0.65;
-  }
-
   .card-services {
     padding: 20px;
     background-color: transparent;
     border: solid 1px;
     border-radius: 6px;
     border-color: #DCDCDC;
-    height: 400px;
+    height: 320px;
     overflow: hidden;
   }
+
+    .desc {
+      font-size: 16px;
+    }
   
   .card-services .hidden-text {
     display: block;
