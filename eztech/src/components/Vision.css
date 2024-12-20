@@ -11,25 +11,12 @@
 .image-placeholder3 {
   height: 300px;
   width: 100%;
-  max-width: 100%;
-}
-
-/* SCREEN SIZE 991 */
-
-@media (max-width: 991px) {
-  .vision-section-bg {
-    padding: 20px 0 60px 0;
-  }
-
-  .vision-shape {
-    display: none;
-  }
 }
 
 /*SCREEN SIZE 992 */
 @media (max-width: 992px) {
   .vision-section-bg {
-    padding: 20px 80px;
+    padding: 20px 80px 40px 80px;
   }
 
   .image-placeholder3 {
