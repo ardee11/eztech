@@ -9,7 +9,6 @@
 }
 
 .image-placeholder3 {
-  background-color: #ccc;
   height: 300px;
   width: 100%;
   max-width: 100%;
@@ -27,17 +26,20 @@
   }
 }
 
-/*SCREEN SIZE 576 */
-
-@media (max-width: 576px) {
-
-  .mission-section-bg {
-    padding: 40px 0;
-    /* Adjust padding for mobile */
+/*SCREEN SIZE 992 */
+@media (max-width: 992px) {
+  .vision-section-bg {
+    padding: 20px 80px;
   }
 
-  .image-placeholder2 {
-    height: 300px;
-    /* Reduce height on mobile */
+  .image-placeholder3 {
+    height: 100%;
+  }
+}
+
+/*SCREEN SIZE 576 */
+@media (max-width: 576px) {
+  .vision-section-bg {
+    padding: 10px 0 40px 0;
   }
 }

@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Reveal } from './Reveal';
 import "./AboutUs.css";
+import imgHero2Url from '../assets/aboutus-image.jpg';
 
 const AboutUs = () => {
   return (
@@ -9,11 +10,17 @@ const AboutUs = () => {
         <Reveal>
           <Row className="align-items-center justify-content-between">
             <Col xs={12} md={12} lg={5}>
-                <div className="image-placeholder" />
+                <div className="image-placeholder">
+                  <img 
+                    src={imgHero2Url}
+                    className="img-fluid w-100"
+                    alt="Hero"
+                  />
+                </div>
             </Col>
             <Col xs={12} md={12} lg={6} className="d-flex flex-column text-margin-left">
                 <div className="text-accent-0 fs-5 mobile-margin">ABOUT US</div>
-                <div className="fw-bold fs-4 mobile-margin">
+                <div className="fw-bold fs-4 mobile-margin2">
                   We partner with the most trusted brands in the market.
                 </div>
                 <div className="fs-6 justify mt-3">

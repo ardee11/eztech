@@ -1,7 +1,16 @@
 .summary-section-bg {
   padding: 64px 0;
-  background-color: rgb(0, 74, 91);
+  /* background-color: rgb(0, 74, 91); */
+  background-color: white;
   background-size: cover;
+}
+
+.card {
+  height: 200px;
+  width: full-width;
+  border-radius: 8px;
+  border: 1px solid rgb(255, 255, 255);
+  background: linear-gradient(to bottom right, rgb(0, 211, 88), rgb(0, 117, 143));
 }
 
 .vertical-line {
@@ -11,7 +20,8 @@
 
 .text-main {
   font-size: 54px;
-  color: rgb(227, 227, 227);
+  /* color: rgb(227, 227, 227); */
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,8 +29,9 @@
 
 .text-main .text-sub {
   font-size: 16px;
-  color: rgb(192, 192, 192);
-  margin-left: 15px;
+  /* color: rgb(192, 192, 192); */
+  color: white;
+  /* margin-left: 15px; */
 }
 
 @media (max-width: 991px) {
@@ -31,10 +42,30 @@
   .text-sub {
     font-size: 14px;
   }
+
+  .card {
+    width: 200px;
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin-top: 16px;
+  }
+
   .summary-section-bg {
-    padding: 40px 0;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  .summary-section-bg {
+    padding: 20px 80px;
   }
 }

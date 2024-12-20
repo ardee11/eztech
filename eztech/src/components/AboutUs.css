@@ -3,7 +3,6 @@
 }
 
 .image-placeholder {
-  background-color: #ccc;
   height: 300px;
   width: 100%;
   max-width: 100%;
@@ -15,14 +14,20 @@
   width: 12px;
 }
 
+/*SCREEN SIZE 992 */
+@media (max-width: 992px) {
+  .about-section-bg {
+    padding: 40px 80px;
+  }
+
+  .image-placeholder {
+    height: 100%;
+  }
+}
+
 /*SCREEN SIZE 576 */
 @media (max-width: 576px) {
   .about-section-bg {
     padding: 40px 0;
-    /* Adjust padding for mobile */
-  }
-
-  .image-placeholder {
-    height: 300px;
   }
 }

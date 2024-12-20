@@ -88,6 +88,13 @@ body {
     justify-content: center;
   }
 
+  .mobile-margin2 {
+    margin-top: 18px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+
   .aboutus-shape, .vision-shape, .mission-shape {
     display: none;
   }

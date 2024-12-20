@@ -4,7 +4,6 @@
 }
 
 .image-placeholder2 {
-  background-color: #ccc;
   height: 300px;
   width: 100%;
   max-width: 100%;
@@ -16,16 +15,21 @@
   width: 12px;
 }
 
+/*SCREEN SIZE 992 */
+@media (max-width: 992px) {
+  .mission-section-bg {
+    padding: 140px 80px 60px 80px;
+  }
+
+  .image-placeholder2 {
+    height: 100%;
+  }
+}
+
 /*SCREEN SIZE 576 */
 @media (max-width: 576px) {
   .mission-section-bg {
     padding: 40px 0;
-    /* Adjust padding for mobile */
-  }
-
-  .image-placeholder2 {
-    height: 300px;
-    /* Reduce height on mobile */
   }
 }
 
