@@ -94,11 +94,17 @@
 
 @media (max-width: 992px) {
   .card-services {
-    height: 500px;
+    height: 460px;
   }
 
   .desc {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-services {
+    height: 420px;
   }
 }
 
