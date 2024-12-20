@@ -165,7 +165,7 @@ const Services = () => {
                   {service.title}
                 </p>
                 <hr className="mt-1 hidden-text"></hr>
-                <p className="mt-4 fs-7 hidden-text desc">
+                <p className="mt-3 fs-7 hidden-text desc">
                   {service.description}
                 </p>
               </div>

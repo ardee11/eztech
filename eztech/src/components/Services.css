@@ -39,7 +39,7 @@
   border: solid 1px;
   border-radius: 6px;
   border-color: #DCDCDC;
-  height: 440px;
+  height: 400px;
   overflow: hidden;
   transition: height 0.5s ease, background-color 0.5s ease, color 0.5s ease;
 }
@@ -86,9 +86,19 @@
   font-size: 14px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
+  .desc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
   .card-services {
     height: 500px;
+  }
+
+  .desc {
+    font-size: 14px;
   }
 }
 
