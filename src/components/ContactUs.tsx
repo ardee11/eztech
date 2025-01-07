@@ -85,6 +85,7 @@ const ContactUs = () => {
         });
         setErrors({}); 
         setLoading(false); // Stop loading
+        setRecaptchaToken(null);
       }, (err) => {
         console.error('Failed to send email. Error: ', err);
         showToast('Failed to submit. Please try again.');
