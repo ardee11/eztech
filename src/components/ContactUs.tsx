@@ -1,4 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
+import ReCAPTCHA from 'react-google-recaptcha';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react'; 
@@ -25,6 +26,7 @@ interface FormErrors {
   email?: string;
   phone?: string;
   message?: string;
+  recaptcha?: string;
 }
 
 const ContactUs = () => {
@@ -37,6 +39,7 @@ const ContactUs = () => {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [loading, setLoading] = useState<boolean>(false); // Loading state
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const showToast = useToast();
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -57,6 +60,7 @@ const ContactUs = () => {
     }
     if (!formData.phone) newErrors.phone = 'Phone number is required';
     if (!formData.message) newErrors.message = 'Message is required';
+    if (!recaptchaToken) newErrors.recaptcha = 'Please complete the reCAPTCHA';
     return newErrors;
   };
 
@@ -154,6 +158,17 @@ const ContactUs = () => {
                       {errors.message}
                     </Form.Control.Feedback>
                   </Form.Group>
+
+                  <ReCAPTCHA
+                    className="mt-3"
+                    sitekey="6LfwTLAqAAAAAIh3ixrqFi-n_j0cTnccApXW_i93"
+                    onChange={(token) => setRecaptchaToken(token)} // Save the token to state
+                    onExpired={() => setRecaptchaToken(null)} // Reset token if expired
+                  />
+                  {errors.recaptcha && (
+                    <div className="text-danger mt-2">{errors.recaptcha}</div>
+                  )}
+
                   <Button 
                     type="submit" 
                     className="mt-4 primary-button px-4 submit-button"
