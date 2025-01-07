@@ -62,4 +62,10 @@
   .margin-form {
     margin-bottom: 12px;
   }
+
+  .recaptcha-responsive {
+    transform: scale(0.6);
+    /* Adjust the scale factor as needed */
+    transform-origin: 0 0;
+  }
 }

@@ -160,7 +160,7 @@ const ContactUs = () => {
                   </Form.Group>
 
                   <ReCAPTCHA
-                    className="mt-3"
+                    className="mt-3 recaptcha-responsive"
                     sitekey="6LfwTLAqAAAAAIh3ixrqFi-n_j0cTnccApXW_i93"
                     onChange={(token) => setRecaptchaToken(token)} // Save the token to state
                     onExpired={() => setRecaptchaToken(null)} // Reset token if expired
