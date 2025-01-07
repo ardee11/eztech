@@ -149,8 +149,8 @@
   }
 }
 
-.card-ani {
+ .card-ani {
   animation: appear linear;
   animation-timeline: view();
-  animation-range: entry 10%;
-}
+  animation-range: entry 50%;
+} 
